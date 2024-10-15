@@ -2,5 +2,7 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/go-first-fl-codestyle" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/go_backend_test_homework" vcs="Git" />
   </component>
 </project>
