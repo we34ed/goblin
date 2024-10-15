@@ -147,3 +147,11 @@
 
 2)"go test" - команда,проверяющая наличие обязательных файлов и корректность выполнения описанной функции
 
+//TODO:Линтеры(анализатор кода)
+
+
+1)"go install github.com/golangci/golangci-lint/cmd/golangci-lint@latest" - команда для установки "golangci" с помощью Go
+
+2)"golangci-lint --version" - команда,проверяющая установлен ли "golangci"
+
+3)"golangci-lint help linters" - команда,показывающая список поддерживаемых линтеров
