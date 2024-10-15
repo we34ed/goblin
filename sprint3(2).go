@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"time"
+)
 
 // )
 // //todo:типизация
@@ -133,18 +136,9 @@ import "fmt"
 //
 // todo:конец
 
-//	func main() {
-//		timing1 := time.Date(1978, 05, 14, 00, 00, 00, 00, time.UTC)
-//		timing2 := time.Date(2024, 10, 12, 9, 43, 00, 00, time.UTC)
-//		duration := timing2.Sub(timing1)
-//		fmt.Printf("я живу %.1f дней", duration.Hours()/24)
-//	}
 func main() {
-
-	kaif := 8 * 12 * 22
-	fmt.Println(kaif)
-	work := 365*22 - 2112
-	fmt.Println(work)
+	timing1 := time.Date(1978, 05, 14, 00, 00, 00, 00, time.UTC)
+	timing2 := time.Date(2024, 10, 12, 9, 43, 00, 00, time.UTC)
+	duration := timing2.Sub(timing1)
+	fmt.Printf("я живу %.1f дней", duration.Hours()/24)
 }
-
-/////
