@@ -137,6 +137,8 @@ package main
 //		duration := timing2.Sub(timing1)
 //		fmt.Printf("я живу %.1f дней", duration.Hours()/24)
 //	}
+
+// функция
 //func codew(code map[string][]int) {
 //	for key, value := range code {
 //		counter := 0.0
@@ -146,6 +148,8 @@ package main
 //		fmt.Println(key, counter/float64(len(value)))
 //	}
 //}
+//
+//// мэйн
 //func main() {
 //	mapp := map[string][]int{
 //		"stas":  {2, 5, 5, 5, 4},
