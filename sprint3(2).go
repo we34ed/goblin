@@ -1,9 +1,6 @@
 package main
 
-import (
-	"fmt"
-	"time"
-)
+import "fmt"
 
 // )
 // //todo:типизация
@@ -136,9 +133,27 @@ import (
 //
 // todo:конец
 
+//	func main() {
+//		timing1 := time.Date(1978, 05, 14, 00, 00, 00, 00, time.UTC)
+//		timing2 := time.Date(2024, 10, 12, 9, 43, 00, 00, time.UTC)
+//		duration := timing2.Sub(timing1)
+//		fmt.Printf("я живу %.1f дней", duration.Hours()/24)
+//	}
+func codew(code map[string][]int) {
+	for key, value := range code {
+		counter := 0.0
+		for _, element := range value {
+			counter += float64(element)
+		}
+		fmt.Println(key, counter/float64(len(value)))
+	}
+}
 func main() {
-	timing1 := time.Date(1978, 05, 14, 00, 00, 00, 00, time.UTC)
-	timing2 := time.Date(2024, 10, 12, 9, 43, 00, 00, time.UTC)
-	duration := timing2.Sub(timing1)
-	fmt.Printf("я живу %.1f дней", duration.Hours()/24)
+	mapp := map[string][]int{
+		"stas":  {2, 5, 5, 5, 4},
+		"vanya": {3, 4, 4, 3, 5},
+		"danya": {4, 4, 4, 5, 5},
+		"sanya": {2, 5, 5, 5, 4},
+	}
+	codew(mapp)
 }
