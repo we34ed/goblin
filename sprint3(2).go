@@ -161,3 +161,13 @@ package main
 //		}
 //		codew(mapp)
 //	}
+
+//	func main() {
+//		counter := 0
+//		for i := 0; i < 1000; i++ {
+//			if i%2 == 0 {
+//				counter += 1
+//			}
+//		}
+//		fmt.Println("Количество чисел, кратных 3 от 0 до 999:", counter)
+//	}
