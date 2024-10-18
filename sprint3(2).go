@@ -171,3 +171,20 @@ package main
 //		}
 //		fmt.Println("Количество чисел, кратных 3 от 0 до 999:", counter)
 //	}
+//
+//	func code(num []int) int {
+//		minimum := len(num)
+//		for _, element := range num {
+//			if element <= minimum {
+//				minimum = element
+//			}
+//		}
+//		return minimum
+//	}
+//
+//	func main() {
+//		slice1 := []int{-1, 2, 3, 0, 5}
+//		slice2 := []int{0, -13, 15, 1, 5}
+//		fmt.Println(code(slice1))
+//		fmt.Println(code(slice2))
+//	}
