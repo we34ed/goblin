@@ -795,15 +795,34 @@ import "fmt"
 //		result := slovo(slice)
 //		fmt.Println(result)
 //	}
-func main() {
-	slice := []int{1, 2, 15, 4, -3, 0}
-	maximum := 0
-	for _, element := range slice {
-		if element > maximum {
-			maximum = element
+//
+//	func main() {
+//		slice := []int{1, 2, 15, 4, -3, 0}
+//		maximum := 0
+//		for _, element := range slice {
+//			if element > maximum {
+//				maximum = element
+//			}
+//		}
+//		fmt.Println(maximum)
+//	}
+//
+// //todo:update
+func grade(grades map[string][]int) {
+	for key, value := range grades {
+		counter := 0
+		for _, element := range value {
+			counter += element
 		}
+		fmt.Println(key, float64(counter)/float64(len(value)))
 	}
-	fmt.Println(maximum)
-}
 
-//todo:update
+}
+func main() {
+	gradesStud := map[string][]int{
+		"stas":  {5, 4, 4, 3, 5},
+		"vanya": {4, 4, 4, 3, 5},
+		"danya": {4, 5, 5, 5, 4},
+	}
+	grade(gradesStud)
+}
