@@ -245,6 +245,4 @@ func main() {
 	}
 
 	fmt.Println(ReadData(running))
-	fmt.Println("привет Ваня")
-	fmt.Println("111")
 }
