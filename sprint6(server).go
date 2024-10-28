@@ -113,7 +113,27 @@ import (
 //	func main() {
 //		fmt.Println("Запускаем сервер")
 //		http.HandleFunc(`/`, handler)
-//		err := http.ListenAndServe("localhost:8080",nil) //запуск сервера
+//		err := http.ListenAndServe("localhost:8080",nil) //http.ListenAndServe-запуск сервера
+//		if err != nil {
+//			panic(err)
+//		}
+//		fmt.Println("Работа окончена")
+//	}
+//
+//	func handler(res http.ResponseWriter, req *http.Request) {
+//		var out string
+//		if req.URL.Path == `/time` || req.URL.Path == `/time/` {
+//			out = time.Now().Format("02.01.2006 15:04:05")
+//		} else {
+//			out = fmt.Sprintf("Host:%s\nPath:%s\nMethod:%s", req.Host, req.URL.Path, req.Method)
+//		}
+//		res.Write([]byte(out))
+//	}
+//
+//	func main() {
+//		fmt.Println("Запускаем сервер")
+//		http.HandleFunc(`/`, handler)
+//		err := http.ListenAndServe("localhost:8080", nil) //http.ListenAndServe-запуск сервера
 //		if err != nil {
 //			panic(err)
 //		}
@@ -124,7 +144,7 @@ func handler(res http.ResponseWriter, req *http.Request) {
 	if req.URL.Path == `/time` || req.URL.Path == `/time/` {
 		out = time.Now().Format("02.01.2006 15:04:05")
 	} else {
-		out = fmt.Sprintf("Host:%s\nPath:%s\nMethod:%s", req.Host, req.URL.Path, req.Method)
+		out = fmt.Sprintf("Host:%s\nPath:%s\nMethod:%s\n", req.Host, req.URL.Path, req.Method)
 	}
 	res.Write([]byte(out))
 }
