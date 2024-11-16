@@ -139,6 +139,26 @@ import (
 //		}
 //		fmt.Println("Работа окончена")
 //	}
+//
+//	func handler(res http.ResponseWriter, req *http.Request) {
+//		var out string
+//		if req.URL.Path == `/time` || req.URL.Path == `/time/` {
+//			out = time.Now().Format("02.01.2006 15:04:05")
+//		} else {
+//			out = fmt.Sprintf("Host:%s\nPath:%s\nMethod:%s", req.Host, req.URL.Path, req.Method)
+//		}
+//		res.Write([]byte(out))
+//	}
+//
+//	func main() {
+//		fmt.Println("Запускаем сервер")
+//		http.HandleFunc(`/`, handler)
+//		err := http.ListenAndServe("localhost:8080", nil)
+//		if err != nil {
+//			panic(err)
+//		}
+//		fmt.Println("Работа окончена")
+//	}
 func handler(res http.ResponseWriter, req *http.Request) {
 	var out string
 	if req.URL.Path == `/time` || req.URL.Path == `/time/` {
